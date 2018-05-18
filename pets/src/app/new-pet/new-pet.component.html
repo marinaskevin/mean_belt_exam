@@ -1,0 +1,57 @@
+<p><b>Know of a pet needing a home?</b></p>
+<div *ngIf="errors" class="text-danger"><p *ngFor="let error of errors">{{error}}</p></div>
+<div class="container alert-primary">
+  <form class="form-group">
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" for="name" id="name-label">Name</span>
+      </div>
+      <input type="text" class="form-control" aria-label="Default" aria-describedby="name-label" id="name" name="name" [(ngModel)]="name">
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" for="type">Type</span>
+      </div>
+      <input type="text" class="form-control" aria-label="Default" aria-describedby="type-label" id="type" name="type" [(ngModel)]="type">
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" for="description" id="description-label">Description</span>
+      </div>
+      <input type="text" class="form-control" aria-label="Default" aria-describedby="description-label" id="description" name="description" [(ngModel)]="description">
+    </div>
+
+    <div class="container">
+      <p>Skills (optional)</p>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" for="skill1" id="skill1-label">Skill 1</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Default" aria-describedby="skill1-label" id="skill1" name="skill1" [(ngModel)]="skill1">
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" for="skill2" id="skill2-label">Skill 2</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Default" aria-describedby="skill2-label" id="skill2" name="skill2" [(ngModel)]="skill2">
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" for="skill3" id="skill3-label">Skill 3</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Default" aria-describedby="skill3-label" id="skill3" name="skill3" [(ngModel)]="skill3">
+      </div>
+    </div>
+
+    <div class="btn-group pull-right btn-group-justified" role="group">
+        <button type="button" class="btn btn-success" (click)="shelterPet()">Submit</button>
+        <button type="button" class="btn btn-primary" [routerLink]="['']">Cancel</button>
+    </div>
+
+  </form>
+</div>
